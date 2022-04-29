@@ -1,7 +1,15 @@
-# Real-Estate-Php
+# Real-Estate
+
+You can test it at https://testing.justinthemorning.com 
+
+# Main purpose
+A project for HCMUE Security 2022
+
+Serverside to perform Clickjacking Attack
 
 
 
+# Description
 Realestate Management system
 
 This is a ready to use web application for managing Real Estate System. the application is built on PHP and Mysql, its interface is very user friendly.
@@ -26,4 +34,4 @@ It can easily be used to manage two different group of users with different perm
 
 Import the Database in Your Server like Xampp, Wamp
 
-Database Name -: developer
+Database Name -: dev
