@@ -22,6 +22,6 @@ We have 3 demo.
 
 * Include: 1 file html **likeClick.html** and 1 folder **serverside_php**
 * Perform attack: *assign mouse pointer to facebook like button*
-* 
+
 * I also deploy *serverside_php* on hosting. You can test it a https://testing.justinthemorning.com
 * I put serverside project for performing prevent clickjacking by X-Frames.
